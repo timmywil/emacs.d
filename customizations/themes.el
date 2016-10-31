@@ -4,3 +4,5 @@
 ;; Uncomment this to increase font size
 ;; (set-face-attribute 'default nil :height 140)
 (load-theme 'tomorrow-night-bright t)
+;;; Enable linum mode
+(global-linum-mode t)
