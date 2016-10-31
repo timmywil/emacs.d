@@ -58,6 +58,11 @@
 ;; yay rainbows!
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
+;;; auto-indent
+(defun set-newline-and-indent ()
+  (local-set-key (kbd "RET") 'newline-and-indent))
+(add-hook 'lisp-mode-hook 'set-newline-and-indent)
+
 ;; use 2 spaces for tabs
 (defun die-tabs ()
   (interactive)
