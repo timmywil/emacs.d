@@ -64,3 +64,6 @@
 (setq projectile-create-missing-test-files t)
 
 (global-set-key (kbd "M-n") 'imenu)
+
+(global-set-key (kbd "s-]") 'other-window)
+(global-set-key (kbd "s-[") 'other-window)
