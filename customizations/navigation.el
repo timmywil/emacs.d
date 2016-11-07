@@ -49,6 +49,8 @@
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+;; Bind ⌘-w to deleting a window
+(global-set-key (kbd "s-w") 'delete-window)
 
 ;; Enhances M-x to allow easier execution of commands. Provides
 ;; a filterable list of possible commands in the minibuffer

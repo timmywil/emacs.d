@@ -4,6 +4,7 @@
 ;;; Load all autoloads for helm and its extensions
 ;;
 (require 'helm-config)
+(require 'helm-cmd-t)
 ;;(load "/home/thierry/elisp/helm-extensions/helm-extensions-autoloads.el")
 
 
@@ -96,6 +97,7 @@
 ;;; Global-map
 ;;
 ;;
+(global-set-key (kbd "s-t")                          'helm-cmd-t)
 (global-set-key (kbd "M-x")                          'undefined)
 (global-set-key (kbd "M-x")                          'helm-M-x)
 (global-set-key (kbd "M-y")                          'helm-show-kill-ring)

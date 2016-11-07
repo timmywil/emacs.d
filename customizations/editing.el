@@ -4,6 +4,11 @@
 ;; http://www.emacswiki.org/emacs/HippieExpand
 (global-set-key (kbd "M-/") 'hippie-expand)
 
+(global-set-key (kbd "C-a") 'back-to-indentation)
+
+(global-set-key (kbd "s-{") 'previous-buffer)
+(global-set-key (kbd "s-}") 'next-buffer)
+
 ;; Lisp-friendly hippie expand
 (setq hippie-expand-try-functions-list
       '(try-expand-dabbrev
@@ -27,6 +32,8 @@
 
 ;; Don't use hard tabs
 (setq-default indent-tabs-mode nil)
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; When you visit a file, point goes to the last place where it
 ;; was when you previously visited the same file.
