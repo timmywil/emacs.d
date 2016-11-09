@@ -9,6 +9,8 @@
      (tagedit-add-paredit-like-keybindings)
      (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
 
+;; Auto-start on any markup modes
+(add-hook 'sgml-mode-hook 'emmet-mode)
 
 ;; coffeescript
 (add-to-list 'auto-mode-alist '("\\.coffee.erb$" . coffee-mode))
