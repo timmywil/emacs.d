@@ -6,3 +6,6 @@
 (load-theme 'tomorrow-night-bright t)
 ;;; Enable linum mode
 ;; (global-linum-mode t)
+;;; Fixes shell prompt colors
+(set-face-attribute 'comint-highlight-prompt nil
+                    :inherit nil)
