@@ -97,6 +97,7 @@
 ;;
 ;;
 (global-set-key (kbd "s-t")                          'helm-projectile)
+(global-set-key (kbd "s-F")                          'helm-projectile-grep)
 (global-set-key (kbd "M-x")                          'undefined)
 (global-set-key (kbd "M-x")                          'helm-M-x)
 (global-set-key (kbd "M-y")                          'helm-show-kill-ring)
