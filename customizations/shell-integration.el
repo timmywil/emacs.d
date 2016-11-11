@@ -18,3 +18,5 @@
 (add-hook 'shell-mode-hook
           '(lambda ()
              (local-set-key (kbd "C-l") 'eshell-clear-buffer)))
+
+(global-set-key (kbd "s-K") 'shell)

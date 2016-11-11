@@ -67,7 +67,7 @@
 (projectile-global-mode)
 (setq projectile-create-missing-test-files t)
 ;; interop with neotree
-;; (setq projectile-switch-project-action 'neotree-projectile-action)
+(setq projectile-switch-project-action 'neotree-projectile-action)
 
 (global-set-key (kbd "M-n") 'imenu)
 
