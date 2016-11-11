@@ -1,6 +1,10 @@
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 
+;; Adds project tree viewer (bird's eye view)
+;; https://www.emacswiki.org/emacs/NeoTree
+(require 'neotree)
+(global-set-key (kbd "s-T") 'neotree-toggle)
 
 ;; "When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
