@@ -91,3 +91,8 @@
 
 ;; crux
 (require 'crux)
+
+;; editorconfig
+;; https://github.com/editorconfig/editorconfig-emacs
+(require 'editorconfig)
+(editorconfig-mode 1)

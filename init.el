@@ -56,6 +56,10 @@
     ;; of ido
     ido-ubiquitous
 
+    ;; .editorconfig support
+    ;; https://github.com/editorconfig/editorconfig-emacs
+    editorconfig
+
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
     ;; http://www.emacswiki.org/emacs/Smex
