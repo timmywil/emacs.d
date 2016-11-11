@@ -9,9 +9,6 @@
    "AUTH0_CLIENT_ID"
    "AUTH0_CLIENT_SECRET"))
 
-;;; This is so boot uses the right clojure version in emacs shell
-(exec-path-from-shell-setenv "BOOT_CLOJURE_VERSION" "1.8.0")
-
 (defun eshell-clear-buffer ()
   "Clear terminal"
   (interactive)
