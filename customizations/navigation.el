@@ -4,7 +4,6 @@
 ;; Adds project tree viewer (bird's eye view)
 ;; https://www.emacswiki.org/emacs/NeoTree
 (require 'neotree)
-(global-set-key (kbd "s-T") 'neotree-toggle)
 
 ;; "When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
@@ -67,7 +66,18 @@
 (projectile-global-mode)
 (setq projectile-create-missing-test-files t)
 ;; interop with neotree
-(setq projectile-switch-project-action 'neotree-projectile-action)
+(defun neotree-project-dir ()
+    (interactive)
+    (let ((project-dir (projectile-project-root))
+          (file-name (buffer-file-name)))
+      (if project-dir
+          (if (neotree-toggle)
+              (progn
+                (neotree-dir project-dir)
+                (neotree-find file-name)))
+        (message "Could not find git project root."))))
+
+(global-set-key (kbd "s-T") 'neotree-project-dir)
 
 (global-set-key (kbd "M-n") 'imenu)
 
