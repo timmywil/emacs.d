@@ -1,10 +1,9 @@
-;;; init-helm-thierry.el --- My startup file for helm. -*- lexical-binding: t -*- 
+;;; init-helm-thierry.el --- My startup file for helm. -*- lexical-binding: t -*-
 ;;; Code:
 
 ;;; Load all autoloads for helm and its extensions
 ;;
 (require 'helm-config)
-(require 'helm-cmd-t)
 ;;(load "/home/thierry/elisp/helm-extensions/helm-extensions-autoloads.el")
 
 
@@ -26,7 +25,7 @@
 ;; (use-package helm-sys
 ;;     :config (helm-top-poll-mode 1))
 
-;;;; Test Sources or new helm code. 
+;;;; Test Sources or new helm code.
 ;;   !!!WARNING EXPERIMENTAL!!!
 
 (defun helm/version-1 ()
@@ -97,7 +96,7 @@
 ;;; Global-map
 ;;
 ;;
-(global-set-key (kbd "s-t")                          'helm-cmd-t)
+(global-set-key (kbd "s-t")                          'helm-projectile)
 (global-set-key (kbd "M-x")                          'undefined)
 (global-set-key (kbd "M-x")                          'helm-M-x)
 (global-set-key (kbd "M-y")                          'helm-show-kill-ring)
@@ -140,14 +139,14 @@ First call indent, second complete symbol, third complete fname."
     (progn
       (define-key lisp-interaction-mode-map [remap indent-for-tab-command] 'helm-multi-lisp-complete-at-point)
       (define-key emacs-lisp-mode-map       [remap indent-for-tab-command] 'helm-multi-lisp-complete-at-point)
-      
+
       ;; lisp complete. (Rebind M-<tab>)
       (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
       (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
-    
+
     (define-key lisp-interaction-mode-map [remap indent-for-tab-command] 'helm-multi-lisp-complete-at-point)
     (define-key emacs-lisp-mode-map       [remap indent-for-tab-command] 'helm-multi-lisp-complete-at-point)
-    
+
     ;; lisp complete. (Rebind M-<tab>)
     (define-key lisp-interaction-mode-map [remap completion-at-point] 'helm-lisp-completion-at-point)
     (define-key emacs-lisp-mode-map       [remap completion-at-point] 'helm-lisp-completion-at-point))
